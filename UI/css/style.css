@@ -16,6 +16,14 @@
 	color: #DA670F;
 }
 
+.makegreen{
+	color: green;
+}
+
+.makered{
+	color: red;
+}
+
 
 .beautify{
 font-size: x-large;
@@ -77,6 +85,16 @@ a:hover{
 }
 
 
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+
+
 
 @media screen and (max-width: 500px) {
   .wrapper > ul >li >a{
@@ -92,7 +110,7 @@ a:hover{
   }
   .left{
   	float: none;
-  	height: 9em;
+  	height: 7em;
 
   }
   ul li{
