@@ -12,6 +12,37 @@
 
 }
 
+#fifthadminitem{
+
+}
+
+.buttongreen, .buttonblue, .buttonred {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10%;
+}
+
+.buttonblue{
+	background-color: #416A94;
+}
+
+.buttonred{
+	background-color: #FF5630;
+}
+
+.buttongreen:hover, .buttonblue:hover, .buttonred:hover {
+    
+    border-radius: 25%;
+}
+
 .makeorange{
 	color: #DA670F;
 }
