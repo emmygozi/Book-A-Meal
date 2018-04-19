@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Signin</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/createpopup.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+
+<div class="left">
+	<ul>
+		<li class="beautify">Book-A-Meal</li>
+	<li><a href="#">Home</a></li>
+    <li><a href="#">Customer Order</a></li>
+    <li><a href="#">Order History</a></li>
+    
+    
+	
+	
+	
+	</ul>
+</div>
+
+<div class="right" >
+	<p id="fourthadminitem"><a href="#" >Admin Login</a></p>
+</div>
+
+</div>
+
+<div class="mycontainer">
+	<h2>Customer Order History</h2>
+<h4>Here is a history of all your orders so far. </h4>
+<p class="makeorange"><b>NB: Recent orders appear on top.</b></p>
+
+<table style="width:80%">
+  <caption><b>ORDER HISTORY</b></caption>
+  <tr>
+    <th>Name</th>
+    <th>Meal Ordered</th>
+    <th>Order Date and Time</th>
+    <th>Status</th>
+  </tr>
+  <tr>
+    <td>Qwerty Ajala</td>
+    <td>Iyan and Eforiro</td>
+    <td>YYYY-MM-DD HH:MI:SS.</td>
+    <td class="makered">Pending *</td>
+  </tr>
+  <tr>
+    <td>Qwerty Ajala</td>
+    <td>Rice and Chicken</td>
+    <td>YYYY-MM-DD HH:MI:SS.</td>
+    <td class="makegreen">Delivered</td>
+  </tr>
+
+  <tr>
+    <td>Qwerty Ajala</td>
+    <td>Beans and Bread</td>
+    <td>YYYY-MM-DD HH:MI:SS.</td>
+    <td class="makegreen">Delivered</td>
+  </tr>
+
+  <tr>
+    <td>Qwerty Ajala</td>
+    <td>Salad</td>
+    <td>YYYY-MM-DD HH:MI:SS.</td>
+    <td class="makegreen">Delivered</td>
+  </tr>
+
+  <tr>
+    <td>Qwerty Ajala</td>
+    <td>Small Chops</td>
+    <td>YYYY-MM-DD HH:MI:SS.</td>
+    <td class="makegreen">Delivered</td>
+  </tr>
+
+  <tfoot>
+  	<td class="makered"> * dispatch would send a delivery confirmation upon delivery</td>
+  	<td></td>
+  	<td></td>
+  	<td></td>
+  </tfoot>
+</table>
+	
+</div>
+
+
+
+
+<script type="text/javascript">
+	var tooltip = document.getElementById("fourthadminitem");
+	tip(tooltip);
+</script>
+</body>
+</html>
