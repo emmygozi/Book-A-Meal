@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Admin-Login</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/buttonstyle.css">
+  <link rel="stylesheet" type="text/css" href="../css/mobileview.css">
+	<script type="text/javascript" src="../js/createpopup.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+
+<div class="left">
+	<ul>
+		<li class="beautify">Book-A-Meal</li>
+	<li><a href="login.html">Home</a></li>
+    <li><a href="admin-management.html">Admin Management</a></li>
+    <li><a href="admin-order-history.html">All Order History</a></li>
+	
+	
+    
+	
+	
+	
+	</ul>
+</div>
+
+<div class="right" >
+	<p><a href="../index.html" target="_blank">View Site</a></p>
+</div>
+
+</div>
+<form>
+<div class="mycontainer">
+	<div>
+		<h2>Admin Login </h2>
+		 <h4 class="lotsofspace">Logout <a href="#" class ="makeorange">here</a></h4>
+	</div>
+	
+
+	<div>
+		<label><b>Email Address</b></label><br>
+		<input type="email" name="mailsddr" placeholder="email"><br>
+		<div class="spacing"></div>
+		
+	</div>
+
+	<div>
+		<label><b>Password</b></label><br>
+		<input type="password" name="passerr" id="adminp" ><br>
+		<div class="spacing"></div>
+	</div>
+
+	<div>
+		<label><b>Confirm Password</b></label><br>
+		<input type="password" name="passerr2" id="adminp2"><br>
+		<div class="spacing">&nbsp;<div id="adminmatch"></div></div>
+	</div>
+
+	<div>
+		<input id="adminsave" class="buttongreen" type="submit" value="submit" disabled><br>
+	</div>
+	<p></p>
+	
+</div>
+
+ </form>   
+
+<div class="spacing"></div>
+<hr>
+<div class="centerfooter">
+  Copyright © 2018, <a href="../index.html" class="makeorange">book-a-meal</a> All Rights Reserved
+</div>
+
+
+<script type="text/javascript" src="../js/dommanipulation.js"></script>
+ <script type="text/javascript">
+ 
+	
+	manipulate("adminp", "adminp2", "adminsave", "adminmatch");
+	
+</script>
+</body>
+</html>

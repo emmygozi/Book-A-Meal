@@ -1,0 +1,17 @@
+Book-A-Meal meal makes provision for an admin(caterer) and a  customer. 
+The admin adds, modifies and delete meals while also creating a daily menu.
+The customer orders just one meal at a time after login. Customer must have an account to book a meal.
+THINGS TO NOTE ABOUT ADMIN(CATERER)
+==> All admin files are kept in a folder “/admin”.
+==> Admin adds, modifies and delete meals.
+==> Admins create a daily menu.
+THINGS TO NOTE ABOUT CUSTOMER
+==> Customer can order only one meal at a time.
+==> Customer must have an account for an order to be successful.
+==> Meals yet to be delivered to customer are marked as pending.
+==> Successfully delivered meals status are marked as successful.
+FEATURES 
+==> Javascript Dom manipulation to match password.
+==> Alert message that shows only once(onload) when “Admin Login” is hovered.
+==> Site is descriptive and intuitive.
+==> Option to “Visit site” from admin navbar opens up a new tab while still remaining on admin page.
