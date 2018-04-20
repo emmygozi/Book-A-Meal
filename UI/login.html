@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Signup</title>
+	<title>Home</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/buttonstyle.css">
 	<link rel="stylesheet" type="text/css" href="css/mobileview.css">
@@ -19,6 +19,8 @@
    <li><a href="order-summary.html">Order Summary</a></li>
    <li><a href="customer-order-history.html">Order History</a></li>
     
+    
+    
 	
 	
 	
@@ -26,60 +28,55 @@
 </div>
 
 <div class="right" >
-	<p id="secondadminitem"><a href="admin/login.html" >Admin Login</a></p>
+	<p id="sixthadminitem"><a href="admin/login.html" >Admin Login</a></p>
 </div>
 
 </div>
 
 <div class="mycontainer">
-	
-	<h3>Already have an account? Login <a href="index.html" class="makeorange">here</a></h3>
-	<h2 class="centerheading">Signup</h2>
 
-	<form method="post">
-	<div>
-		<label><b>Full Name</b></label><br>
-		<input type="text" name="fullname" placeholder="surname first"><br>
-		<div class="spacing"></div>
-		
-	</div>
 
-	<div>
-		<label><b>Delivery Address</b></label><br>
-		<input type="text" name="deliveryaddr" placeholder="delivery address"><br>
-		<div class="spacing"></div>
-		
-	</div>
+<form method="post">
 
+	<h3>Don't have an account yet? Signup <a href="signup.html" class ="makeorange">here</a></h3>
+	<h2 class="centerheading">Signin</h2>
 	<div>
 		<label><b>Email Address</b></label><br>
-		<input type="email" name="mailsddr22" placeholder="email"><br>
+		<input type="email" name="mailsddr" placeholder="email"><br>
 		<div class="spacing"></div>
 		
 	</div>
 
 	<div>
 		<label><b>Password</b></label><br>
-		<input type="password" nname="passer22" id="passer221"><br>
+		<input type="password" name="passer" id="pass1"><br>
 		<div class="spacing"></div>
 	</div>
 
 	<div>
-		<b>Confirm Password</b></label><br>
-		<input type="password" name="passer223" id="passer223"><br>
-		<div class="spacing">&nbsp;<div id="upmatch"></div></div>
+		<label><b>Confirm Password</b></label><br>
+		<input type="password" name="passer2" id="pass2"> &nbsp;<div id="matching"></div><br>
+		<div class="spacing"></div>
 	</div>
-
 
 	<div>
-		<input id="upsave" class="buttongreen" type="submit" value="submit" disabled><br>
+	<button id="save" class="buttongreen" type="submit"  disabled>submit</button><br>
 	</div>
-	</form>
 	<p></p>
+
+
+
 	
+
+
+ </form>   
+<!--Name of file is index-->
+
+<div class="spacing"></div>
+
+
 </div>
 
-    
 
 <div class="spacing"></div>
 <hr>
@@ -87,15 +84,15 @@
 	Copyright © 2018, <a href="index.html" class="makeorange">book-a-meal</a> All Rights Reserved
 </div>
 
+
 <script type="text/javascript" src="js/dommanipulation.js"></script>
  <script type="text/javascript">
  
-	manipulate("passer221", "passer223", "upsave", "upmatch");
+	manipulate("pass1", "pass2", "save", "matching");
 
 
-	var tooltip = document.getElementById("secondadminitem");
+	var tooltip = document.getElementById("sixthadminitem");
 	tip(tooltip);
 </script>
-
 </body>
 </html>
