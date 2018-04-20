@@ -25,6 +25,12 @@
 	float: left;
 }
 
+#myform{
+	border: 1px dotted #202C45;
+	margin-right: 45em;
+	margin-bottom: 1em;
+}
+
 
 .makeorange{
 	color: #DA670F;
