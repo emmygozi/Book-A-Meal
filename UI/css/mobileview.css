@@ -8,11 +8,12 @@
   .right {
     float: none;
     margin-top: -1em;
-    width: 85%;
+    width: 100%;
   }
   .left{
   	float: none;
   	height: 7em;
+    width: 100%;
 
   }
   ul li{

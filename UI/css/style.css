@@ -204,3 +204,7 @@ th, td {
 .centerfooter{
 	text-align: center;
 }
+
+.boldin{
+	font-weight: bolder;
+}
