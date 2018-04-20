@@ -32,8 +32,11 @@
 </div>
 
 <div class="mycontainer">
-	<h2>Already have an account? Login <a href="index.html" class="makeorange">here</a></h2>
+	
+	<h3>Already have an account? Login <a href="index.html" class="makeorange">here</a></h3>
+	<h2 class="centerheading">Signup</h2>
 
+	<form method="post">
 	<div>
 		<label><b>Full Name</b></label><br>
 		<input type="text" name="fullname" placeholder="surname first"><br>
@@ -50,28 +53,40 @@
 
 	<div>
 		<label><b>Email Address</b></label><br>
-		<input type="email" name="mailsddr2" placeholder="email"><br>
+		<input type="email" name="mailsddr22" placeholder="email"><br>
 		<div class="spacing"></div>
 		
 	</div>
 
 	<div>
 		<label><b>Password</b></label><br>
-		<input type="password" name="passer2"><br>
+		<input type="password" nname="passer22" id="passer221"><br>
 		<div class="spacing"></div>
 	</div>
 
 	<div>
-		<input class="buttongreen" type="submit" value="submit"><br>
+		<b>Confirm Password</b></label><br>
+		<input type="password" name="passer223" id="passer223"><br>
+		<div class="spacing">&nbsp;<div id="upmatch"></div></div>
 	</div>
+
+
+	<div>
+		<input id="upsave" class="buttongreen" type="submit" value="submit" disabled><br>
+	</div>
+	</form>
 	<p></p>
 	
 </div>
 
     
 
+<script type="text/javascript" src="js/dommanipulation.js"></script>
+ <script type="text/javascript">
+ 
+	manipulate("passer221", "passer223", "upsave", "upmatch");
 
-<script type="text/javascript">
+
 	var tooltip = document.getElementById("secondadminitem");
 	tip(tooltip);
 </script>

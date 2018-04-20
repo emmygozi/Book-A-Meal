@@ -48,18 +48,18 @@
 
 	<div>
 		<label><b>Password</b></label><br>
-		<input type="password" name="passer" ><br>
+		<input type="password" name="passerr" id="adminp" ><br>
 		<div class="spacing"></div>
 	</div>
 
 	<div>
 		<label><b>Confirm Password</b></label><br>
-		<input type="password" name="passer2" ><br>
-		<div class="spacing"></div>
+		<input type="password" name="passerr2" id="adminp2"><br>
+		<div class="spacing">&nbsp;<div id="adminmatch"></div></div>
 	</div>
 
 	<div>
-		<input class="buttongreen" type="submit" value="submit"><br>
+		<input id="adminsave" class="buttongreen" type="submit" value="submit" disabled><br>
 	</div>
 	<p></p>
 	
@@ -68,7 +68,11 @@
  </form>   
 
 
-<script type="text/javascript">
+<script type="text/javascript" src="../js/dommanipulation.js"></script>
+ <script type="text/javascript">
+ 
+	
+	manipulate("adminp", "adminp2", "adminsave", "adminmatch");
 	
 </script>
 </body>
