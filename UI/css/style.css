@@ -16,6 +16,13 @@
 
 }
 
+#menuset{
+	width: 30%;
+	float: left;
+}
+
+
+
 .buttongreen, .buttonblue, .buttonred {
     background-color: #4CAF50;
     border: none;
@@ -53,6 +60,10 @@
 
 .makered{
 	color: red;
+}
+
+.makeblue{
+	color: blue;
 }
 
 
