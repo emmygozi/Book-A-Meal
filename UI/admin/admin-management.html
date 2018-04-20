@@ -32,8 +32,21 @@
 <div class="mycontainer">
 	<h2>Add, Modify or Delete a Meal!</h2>
 	
+  <form method="post" enctype="multipart/form-data" id="myform">
+    <div>
 <h4>Add a meal <input type="text" name="">
-  <a href="#"><button type="submit"  class="buttongreen">add meal</button></a> </h4>
+   </h4>
+  </div>
+  <div><h4>Add price
+    <input type="number" name=""></h4>
+  </div>
+  <div><h4>Upload meal image
+    <input class="buttonblue" type="file" name=""></h4>
+  </div>
+
+ <button class="buttongreen" type="submit" disabled>submit</button>
+
+  </form>
 
 <table style="width:80%">
   <caption><b>ALL AVAILABLE MEALS</b></caption>
