@@ -1,4 +1,5 @@
 import express from 'express';
+import routes from '../routes/index';
 
 
 const logger = require('morgan');
@@ -18,7 +19,7 @@ app.use(bodyParser.json());
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
-
+app.use('/', routes);
 app.get('/', (req, res) => res.send('Welcome to greatness! '));
 
 
