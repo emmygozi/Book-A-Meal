@@ -1,4 +1,12 @@
-import dummyorder from '../model/menu';
+import dummyorder from '../model/meal';
+
+/* const dor = dummyorder;
+
+if (dor.find(x => x.name === 'rice and chicken')) {
+  console.log('found!');
+} else {
+  console.log('Not present');
+} */
 
 const dataOrder = [
   {
