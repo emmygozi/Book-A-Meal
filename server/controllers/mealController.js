@@ -1,5 +1,5 @@
 import dummydb from '../model/meal';
-import validateRouteId from '../routes/validateid';
+// import validateRouteId from '../routes/validateid';
 
 /**
  * @class Meals
@@ -32,24 +32,42 @@ class Meals {
      * @param {object} res object
      */
   static updateOne(req, res) {
-    const food = dummydb.find(c => c.id === parseInt(req.params.mealid, 10));
-    if (!food) res.status(404).send('The given id was not found.');
-    console.log(food);
-    // Validate
-    // If invalid, return 400 - bad request
-    const result = validateRouteId.validateMeal(req.body);
-    if (result.error) {
-      res.status(400).send(result.error.details.join(' ').message);
-      return;
+    for (let i = 0; i < dummydb.length; i += 1) {
+      // console.log(dummydb[i].id);
+      const food = dummydb.find(c => c.id === parseInt(req.param('id'), 10));
+      if (food) { // req.params.id does not work for me for some strange reasons while updating
+        dummydb[i].name = req.body.name;
+        dummydb[i].imageid = req.body.imageid;
+        dummydb[i].price = req.body.price;
+        return res.json({
+          dummydb,
+          message: 'meal updated successfully',
+        });
+      }
     }
+    return res.status(404).json({
+      message: 'sorry,meal not found',
+    });
+  }
 
-    // Update meal
-    food.name = req.body.name;
-    food.price = req.body.price;
-    food.imageid = req.body.imageid;
-
-    // return updated meal
-    res.send(food);
+  /**
+     * @return {object} json
+     * @param {object} req object
+     * @param {object} res object
+     */
+  static removeOne(req, res) {
+    for (let i = 0; i < dummydb.length; i += 1) {
+      const food = dummydb.find(c => c.id === parseInt(req.param('id'), 10));
+      if (food) {
+        dummydb.splice(i, 1);
+        return res.json({
+          message: 'meal removed successfully',
+        });
+      }
+    }
+    return res.status(404).json({
+      message: ' meal not found',
+    });
   }
 }
 

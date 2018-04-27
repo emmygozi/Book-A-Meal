@@ -24,13 +24,13 @@ const dataMeal = [
     imageid: 'fdg26374' // id to call saved image from file
   },
   {
-    id: 4,
+    id: 5,
     name: 'eforiro',
     price: 1000,
     imageid: 'as3214' // id to call saved image from file
   },
   {
-    id: 5,
+    id: 6,
     name: 'small chops',
     price: 1000,
     imageid: 'Qw12345' // id to call saved image from file

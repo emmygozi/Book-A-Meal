@@ -8,12 +8,14 @@ const router = express.Router();
 // meal routes
 router.post('/api/v1/meal', meal.addMeal);
 router.get('/api/v1/meal', meal.findAll);
-router.put('/api/v1/meal/:mealid', meal.updateOne);
+router.put('/api/v1/mealupdate/:mealid', meal.updateOne);
+router.delete('/api/v1/deletemeal/:mealid', meal.removeOne);
 
 // order routes
 router.post('/api/v1/order', order.addMeal);
 router.get('/api/v1/order', order.findAll);
-router.put('/api/v1/order/:orderid', order.updateOne);
+router.put('/api/v1/orderupdate/:orderid', order.updateOne);
+router.delete('/api/v1/deleteorder/:orderid', order.removeOne);
 
 // menu routes
 router.post('/api/v1/menu', menu.addMeal);
