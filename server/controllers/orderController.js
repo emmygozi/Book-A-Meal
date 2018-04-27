@@ -1,4 +1,5 @@
 import dummydb from '../model/order';
+import tokenAuth from '../Auth/userToken';
 // import validateRouteId from '../routes/validateid';
 
 /**
@@ -12,6 +13,9 @@ class Orders {
      * @param {object} res object
      */
   static addMeal(req, res) {
+    if ((!req.headers.authorization) || (req.headers.authorization !== tokenAuth)) {
+      return res.status(403).json({ error: 'No credentials sent!' });
+    }
     const { name } = req.body;
     dummydb.push(req.body);
     return res.status(201).json(`${name} is added as a new meal`);
@@ -23,6 +27,9 @@ class Orders {
      * @param {object} res object
      */
   static findAll(req, res) {
+    if ((!req.headers.authorization) || (req.headers.authorization !== tokenAuth)) {
+      return res.status(403).json({ error: 'No credentials sent!' });
+    }
     return res.status(200).json({ Orders: dummydb });
   }
 
@@ -32,24 +39,27 @@ class Orders {
      * @param {object} res object
      */
   static updateOne(req, res) {
+    if ((!req.headers.authorization) || (req.headers.authorization !== tokenAuth)) {
+      return res.status(403).json({ error: 'No credentials sent!' });
+    }
     for (let i = 0; i < dummydb.length; i += 1) {
       // console.log(dummydb[i].id);
       const currentorder = dummydb.find(c => c.id === parseInt(req.param('id'), 10));
       if (currentorder) {
         // req.params.id does not work for me for some strange reasons while updating
-        dummydb[i][0].name = req.body.name;
-        dummydb[i][0].imageid = req.body.imageid;
-        dummydb[i][0].price = req.body.price;
+        dummydb[i].name = req.body.name;
+        dummydb[i].imageid = req.body.imageid;
+        dummydb[i].price = req.body.price;
         dummydb[i].ordertime = req.body.ordertime;
         dummydb[i].deliverystatus = req.body.deliverystatus;
         return res.json({
           dummydb,
-          message: 'business updated successfully',
+          message: 'order updated successfully',
         });
       }
     }
     return res.status(404).json({
-      message: 'sorry,business not found',
+      message: 'order,business not found',
     });
   }
 
@@ -59,6 +69,9 @@ class Orders {
      * @param {object} res object
      */
   static removeOne(req, res) {
+    if ((!req.headers.authorization) || (req.headers.authorization !== tokenAuth)) {
+      return res.status(403).json({ error: 'No credentials sent!' });
+    }
     for (let i = 0; i < dummydb.length; i += 1) {
       const currentorder = dummydb.find(c => c.id === parseInt(req.param('id'), 10));
       if (currentorder) {
