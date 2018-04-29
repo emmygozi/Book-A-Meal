@@ -1,3 +1,5 @@
+[![Coverage Status](https://coveralls.io/repos/github/emmygozi/Book-A-Meal/badge.svg?branch=develop)](https://coveralls.io/github/emmygozi/Book-A-Meal?branch=develop)
+<a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a> <a href="https://codeclimate.com/github/codeclimate/codeclimate/test_coverage"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage" /></a>
 # Book-A-Meal
 Book-A-Meal is an application that allows customers to make food orders and helps the food vendor know what the customers want to eat.
 
