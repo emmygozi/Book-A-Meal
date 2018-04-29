@@ -1,5 +1,3 @@
-// import express from 'express';
-// import request from 'supertest';
 import chai from 'chai';
 import chaiHttp from 'chai-http';
 

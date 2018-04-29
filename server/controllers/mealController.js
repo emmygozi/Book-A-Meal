@@ -1,5 +1,5 @@
 import dummydb from '../model/meal';
-import tokenAuth from '../Auth/authenticateuser';
+// import tokenAuth from '../Auth/authenticateuser';
 
 
 // import validateRouteId from '../routes/validateid';
