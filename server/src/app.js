@@ -1,9 +1,7 @@
 import express from 'express';
+import logger from 'morgan';
+import bodyParser from 'body-parser';
 import routes from '../routes/index';
-
-
-const logger = require('morgan');
-const bodyParser = require('body-parser');
 
 
 // const errorHandler = require('./middlewares/errorHandler');
