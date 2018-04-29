@@ -9,7 +9,7 @@ class UserAuth {
      */
   static userAdd(usermail) {
     if (usermail !== '') {
-      const qwert = usermail.toLowerCase().trim();
+      const qwert = usermail.trim();
       return qwert;
     }
     return false;

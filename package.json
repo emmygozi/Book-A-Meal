@@ -7,11 +7,11 @@
     "start": "node ./server/dist/app.js",
     "start:dev": "cross-env NODE_ENV=development nodemon --exec babel-node ./server/src/app.js",
     "build": "cross-env NODE_ENV=development babel ./server/src -d ./server/dist",
-    "pretest": "npm run lint",
-    "lint": "eslint **/*.js --fix",
-    "coverage": "cat ./server/coverage/lcov.info | coveralls",
-    "test": "cross-env NODE_ENV=test nyc mocha server/tests/test.js --recursive --timeout 30000",
-    "test:watch": "cross-env NODE_ENV=test mocha server/tests/test.js --recursive --timeout 30000 --watch"
+    "pretest": "",
+    "lint": " ",
+    "coverage": "cat ./coverage/lcov.info | coveralls",
+    "test": "cross-env NODE_ENV=test nyc mocha ./server/tests/**/'*.test.js' --recursive --timeout 50000",
+    "test:watch": "npm test --watch"
   },
   "repository": {
     "type": "git",
@@ -39,7 +39,11 @@
     "express": "^4.16.3",
     "express-validator": "^5.1.2",
     "joi": "^13.2.0",
+    "mock-req": "^0.2.0",
+    "mock-res": "^0.5.0",
     "morgan": "^1.9.0",
+    "sinon": "^4.5.0",
+    "supertest": "^3.0.0",
     "uuid": "^3.2.1"
   },
   "devDependencies": {
@@ -50,7 +54,6 @@
     "istanbul": "^0.4.5",
     "mocha": "^5.1.1",
     "nodemon": "^1.17.3",
-    "nyc": "^11.7.1",
-    "supertest": "^3.0.0"
+    "nyc": "^11.7.1"
   }
 }
