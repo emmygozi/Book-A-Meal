@@ -10,7 +10,7 @@
     "pretest": "",
     "lint": " ",
     "coverage": "cat ./coverage/lcov.info | coveralls",
-    "test": "cross-env NODE_ENV=test nyc mocha ./server/tests/**/'*.test.js' --recursive --timeout 50000",
+    "test": "cross-env NODE_ENV=test nyc mocha ./server/tests/**/'*.test.js' --recursive --timeout 50000 --exit",
     "test:watch": "npm test --watch"
   },
   "repository": {
