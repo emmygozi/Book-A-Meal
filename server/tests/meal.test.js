@@ -27,6 +27,12 @@ describe('Meal Routes: Add a meal option', () => {
   it('it should add a meal', (done) => {
     chai.request(app)
       .post('/api/v1/meal')
+      .send({
+        id: 1,
+        name: 'rice and chicken',
+        price: 1500,
+        imageid: 'df8273',
+      })
       .end((err, res) => {
         res.should.have.status(201);
         res.body.should.be.a('string');

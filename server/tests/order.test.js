@@ -26,6 +26,14 @@ describe('Order Routes: Add an order option', () => {
   it('it should add an order', (done) => {
     chai.request(app)
       .post('/api/v1/order')
+      .send({
+        id: 1,
+        name: 'rice and chicken',
+        price: 1500,
+        imageid: 'Qw12345', // id to call saved image from file
+        ordertime: new Date(),
+        deliverystatus: 0
+      })
       .end((err, res) => {
         res.should.have.status(201);
         res.body.should.be.a('string');
