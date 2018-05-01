@@ -4,11 +4,11 @@
   "description": "Book-A-Meal is an application that allows customers to make food orders and helps the food vendor know what the customers want to eat.",
   "main": "index.js",
   "scripts": {
-    "start": "node ./server/src/app.js",
+    "start": "cross-env NODE_ENV=production nodemon --exec babel-node ./server/dist/app.js",
     "start:dev": "cross-env NODE_ENV=development nodemon --exec babel-node ./server/src/app.js",
     "build": "cross-env NODE_ENV=development babel ./server/src -d ./server/dist",
     "pretest": "",
-    "lint": " ",
+    "lint": "eslint **/*.js --fix",
     "coverage": "cat ./coverage/lcov.info | coveralls",
     "test": "cross-env NODE_ENV=test nyc mocha ./server/tests/**/'*.test.js' --recursive --timeout 50000 --exit",
     "test:watch": "npm test --watch"
@@ -31,6 +31,7 @@
     "chai": "^4.1.2",
     "chai-http": "^4.0.0",
     "cross-env": "^5.1.4",
+    "babel-cli": "^6.26.0",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.11.0",
@@ -47,7 +48,6 @@
     "uuid": "^3.2.1"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-plugin-istanbul": "^4.1.6",
     "babel-preset-env": "^1.6.1",

@@ -46,9 +46,9 @@ class Users {
      * @param {object} res object
      */
   static findAll(req, res) {
-    if ((!req.headers.authorization) || (req.headers.authorization !== tokenAuth)) {
+    /*  if ((!req.headers.authorization) || (req.headers.authorization !== tokenAuth)) {
       return res.status(403).json({ error: 'No credentials sent!' });
-    }
+    } */
 
     return res.status(200).json({ Users: dummydb });
   }
