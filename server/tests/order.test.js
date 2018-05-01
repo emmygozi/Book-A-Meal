@@ -10,6 +10,8 @@ import app from '../src/app';
 chai.use(chaiHttp);
 const should = chai.should();
 
+should();
+
 describe('Order Routes: Get all orders option', () => {
   it('it should GET all the Meals', (done) => {
     chai.request(app)
