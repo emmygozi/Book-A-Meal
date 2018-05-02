@@ -16,9 +16,9 @@ class Menu {
     /*  if ((!req.headers.authorization) || (req.headers.authorization !== tokenAuth)) {
       return res.status(403).json({ error: 'No credentials sent!' });
     } */
-    const { name } = req.body;
+    const { name, price, imageid } = req.body;
     dummydb.push(req.body);
-    return res.status(201).json(`${name} is added as a new meal`);
+    return res.status(201).json(`name: ${name}, price: ${price}, imageid: ${imageid}  is added as a new meal`);
   }
 
   /**

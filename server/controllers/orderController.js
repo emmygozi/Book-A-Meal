@@ -1,5 +1,5 @@
 import dummydb from '../model/order';
-import tokenAuth from '../Auth/userToken';
+// import tokenAuth from '../Auth/userToken';
 // import validateRouteId from '../routes/validateid';
 
 /**
@@ -12,7 +12,7 @@ class Orders {
      * @param {object} req object
      * @param {object} res object
      */
-  static addMeal(req, res) {
+  static addOrders(req, res) {
     /* if ((!req.headers.authorization) || (req.headers.authorization !== tokenAuth)) {
       return res.status(403).json({ error: 'No credentials sent!' });
     } */
@@ -52,7 +52,7 @@ class Orders {
         dummydb[i].price = req.body.price;
         dummydb[i].ordertime = req.body.ordertime;
         dummydb[i].deliverystatus = req.body.deliverystatus;
-        return res.json({
+        return res.status(201).json({
           dummydb,
           message: 'order updated successfully',
         });
@@ -76,7 +76,7 @@ class Orders {
       const currentorder = dummydb.find(c => c.id === parseInt(req.param('id'), 10));
       if (currentorder) {
         dummydb.splice(i, 1);
-        return res.json({
+        return res.status(200).json({
           message: 'business removed successfully',
         });
       }

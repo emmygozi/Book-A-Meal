@@ -11,16 +11,16 @@ router.post('/api/v1/user', user.addusers);
 router.get('/api/v1/user', user.findAll);
 
 // meal routes
-router.post('/api/v1/meal', meal.addMeal);
-router.get('/api/v1/meal', meal.findAll);
-router.put('/api/v1/mealupdate/:mealid', meal.updateOne);
-router.delete('/api/v1/deletemeal/:mealid', meal.removeOne);
+router.post('/api/v1/meals', meal.addMeal);
+router.get('/api/v1/meals', meal.findAll);
+router.put('/api/v1/meals/:mealid', meal.updateOne);
+router.delete('/api/v1/meals/:mealid', meal.removeOne);
 
 // order routes
-router.post('/api/v1/order', order.addMeal);
-router.get('/api/v1/order', order.findAll);
-router.put('/api/v1/orderupdate/:orderid', order.updateOne);
-router.delete('/api/v1/deleteorder/:orderid', order.removeOne);
+router.post('/api/v1/orders', order.addOrders);
+router.get('/api/v1/orders', order.findAll);
+router.put('/api/v1/orders/:orderid', order.updateOne);
+router.delete('/api/v1/orders/:orderid', order.removeOne);
 
 // menu routes
 router.post('/api/v1/menu', menu.addMeal);

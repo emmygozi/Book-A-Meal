@@ -52,7 +52,7 @@ class Meals {
         dummydb[i].name = req.body.name;
         dummydb[i].imageid = req.body.imageid;
         dummydb[i].price = req.body.price;
-        return res.json({
+        return res.status(201).json({
           dummydb,
           message: 'meal updated successfully'
         });
@@ -76,7 +76,7 @@ class Meals {
       const food = dummydb.find(c => c.id === parseInt(req.param('id'), 10));
       if (food) {
         dummydb.splice(i, 1);
-        return res.json({
+        return res.status(200).json({
           message: 'meal removed successfully',
         });
       }
