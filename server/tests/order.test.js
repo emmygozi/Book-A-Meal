@@ -96,7 +96,7 @@ describe('Test for failure to delete orders', () => {
       })
       .end((err, res) => {
         if (res.status !== 200) {
-          res.status.have.status(404);
+          res.should.have.status(404);
         }
         done();
       });
