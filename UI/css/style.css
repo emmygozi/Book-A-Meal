@@ -124,16 +124,21 @@ a:hover{
 	margin-left: 10em;
 }
 
-
-table, th, td {
-    border: 1px solid black;
+table {
+    font-family: arial, sans-serif;
     border-collapse: collapse;
-}
-th, td {
-    padding: 5px;
-    text-align: left;
+    width: 100%;
 }
 
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 3px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
 
 .centerheading{
 	margin-left: 1.5em;
