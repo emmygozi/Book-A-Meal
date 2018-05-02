@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
 	<title>Signup</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/buttonstyle.css">
 	<link rel="stylesheet" type="text/css" href="css/mobileview.css">
+	<link rel="stylesheet" type="text/css" href="css/login.css">
 	<script type="text/javascript" src="js/createpopup.js"></script>
 </head>
 <body>
@@ -25,57 +26,64 @@
 </div>
 
 <div class="right" >
-	<p id="secondadminitem"><a href="admin/login.html" >Admin Login</a></p>
+	<ul>
+    <li class="firstadminitemq"><a href="login.html" >Login</a></li>
+  </ul>
 </div>
 
 </div>
 
-<div class="mycontainer">
-	
-	<h3>Already have an account? Login <a href="index.html" class="makeorange">here</a></h3>
-	<h2 class="centerheading">Signup</h2>
 
-	<form method="post">
+<div class="logincenterdiv">
+	<div class="ousidediv1"></div>
+	<div class="insidediv">
+<div class="container">
+
+
+<form method="post">
+
+	<h1>Signup</h1>
 	<div>
 		<label><b>Full Name</b></label><br>
-		<input type="text" name="fullname" placeholder="surname first"><br>
-		<div class="spacing"></div>
-		
-	</div>
-
-	<div>
-		<label><b>Delivery Address</b></label><br>
-		<input type="text" name="deliveryaddr" placeholder="delivery address"><br>
-		<div class="spacing"></div>
+		<input type="email" name="fullname" placeholder="full name"><br>
+		<div class="spacing2"></div>
 		
 	</div>
 
 	<div>
 		<label><b>Email Address</b></label><br>
-		<input type="email" name="mailsddr22" placeholder="email"><br>
-		<div class="spacing"></div>
+		<input type="email" name="mailsddr" placeholder="email"><br>
+		<div class="spacing2"></div>
 		
 	</div>
 
 	<div>
 		<label><b>Password</b></label><br>
-		<input type="password" nname="passer22" id="passer221"><br>
-		<div class="spacing"></div>
+		<input type="password" name="passer22" id="pass221"><br>
+		<div class="spacing2"></div>
 	</div>
 
 	<div>
-		<b>Confirm Password</b></label><br>
-		<input type="password" name="passer223" id="passer223"><br>
-		<div class="spacing">&nbsp;<div id="upmatch"></div></div>
+		<label><b>Confirm Password</b></label><br>
+		<input type="password" name="passer223" id="pass223"> &nbsp;<div id="matching"></div><br>
 	</div>
-
 
 	<div>
-		<input id="upsave" class="buttongreen" type="submit" value="submit" disabled><br>
+	<button id="save" class="button" type="submit"  disabled>submit</button><br>
 	</div>
-	</form>
-	<p></p>
-	
+
+ </form>   
+<!--Name of file is index-->
+<div class="regcent"><p>Already have an account?  <a href="login.html" class="makeorange">Login</a></p></div>
+
+
+
+
+</div>
+</div>
+
+<div class="ousidediv2"></div>
+
 </div>
 
     
