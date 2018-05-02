@@ -8,7 +8,6 @@ import app from '../src/app';
 
 chai.use(chaiHttp);
 const should = chai.should();
-should();
 
 describe('Menu Routes: Add a menu option', () => {
   it('it should GET all the Menus', (done) => {

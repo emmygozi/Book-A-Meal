@@ -39,10 +39,10 @@ class Orders {
      * @param {object} res object
      */
   static updateOne(req, res) {
-    if ((!req.headers.authorization) || (req.headers.authorization !== tokenAuth)) {
+    /* if ((!req.headers.authorization) || (req.headers.authorization !== tokenAuth)) {
       return res.status(403).json({ error: 'No credentials sent!' });
     }
-    for (let i = 0; i < dummydb.length; i += 1) {
+    */ for (let i = 0; i < dummydb.length; i += 1) {
       // console.log(dummydb[i].id);
       const currentorder = dummydb.find(c => c.id === parseInt(req.param('id'), 10));
       if (currentorder) {
@@ -69,10 +69,10 @@ class Orders {
      * @param {object} res object
      */
   static removeOne(req, res) {
-    if ((!req.headers.authorization) || (req.headers.authorization !== tokenAuth)) {
+    /*  if ((!req.headers.authorization) || (req.headers.authorization !== tokenAuth)) {
       return res.status(403).json({ error: 'No credentials sent!' });
     }
-    for (let i = 0; i < dummydb.length; i += 1) {
+    */ for (let i = 0; i < dummydb.length; i += 1) {
       const currentorder = dummydb.find(c => c.id === parseInt(req.param('id'), 10));
       if (currentorder) {
         dummydb.splice(i, 1);
