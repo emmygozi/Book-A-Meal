@@ -1,0 +1,50 @@
+
+#toptxt{
+	width: 100%;
+	text-align: center;
+}
+
+.homefl{
+    display: flex;
+  flex-direction: row;
+}
+.homefl > .outfl{
+    width: 33%;
+    
+}
+
+#applymovemnet{margin-left: 12em;}
+
+button.button{
+  width: 50%;
+  margin-left: 27em;
+
+}
+
+@media screen and (max-width: 600px) {
+
+.homefl{
+    display: block;
+    margin-left: 2em;
+}
+
+.homefl > .outfl{
+    width: 100%;
+
+    
+}
+
+#applymovemnet{margin-left: 0em;}
+
+button.button{
+  width: 50%;
+  margin-left: 7em;
+
+}
+
+
+body{overflow-x: hidden;}
+
+
+
+}

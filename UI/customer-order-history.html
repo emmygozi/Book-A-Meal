@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+  <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
 	<title>Customer-Order-History</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/buttonstyle.css">
@@ -26,18 +27,20 @@
 </div>
 
 <div class="right" >
-	<p id="fourthadminitem"><a href="admin/login.html" >Admin Login</a></p>
+	<ul>
+  <li class="firstadminitemq"><a href="signup.html"">Signup</a></li>
+    <li><a href="login.html">Login</a></li>
+    </ul>
 </div>
 
 </div>
 
-<div class="mycontainer">
+<div class="insidetab">
 	<h2>Customer Order History</h2>
-<h4>Here is a history of all your orders so far. </h4>
-<p class="makeorange"><b>NB: Recent orders appear on top.</b></p>
 
-<table style="width:80%">
-  <caption><b>ORDER HISTORY</b></caption>
+<p class="makeorange" id="flt"><b>NB: Recent orders appear on top.</b></p>
+
+<table style="width:100%">
   <tr>
     <th>Name</th>
     <th>Meal Ordered</th>
@@ -88,13 +91,13 @@
 	
 </div>
 
-<h4 class="lotsofspace">Logout <a href="#" class ="makeorange">here</a></h4>
 
 
 
 <div class="spacing"></div>
-<hr>
-<div class="centerfooter">
+
+<div class="centerfooter" id="dropfoot">
+  <hr>
   Copyright © 2018, <a href="index.html" class="makeorange">book-a-meal</a> All Rights Reserved
 </div>
 

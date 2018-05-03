@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+  <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
 	<title>Order-Summary</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/buttonstyle.css">
   <link rel="stylesheet" type="text/css" href="css/mobileview.css">
-  <link rel="stylesheet" type="text/css" href="css/login.html">
 	<script type="text/javascript" src="js/createpopup.js"></script>
 </head>
 <body>
@@ -27,19 +27,18 @@
 </div>
 
 <div class="right" >
-	<p id="fifthadminitem"><a href="admin/login.html" >Admin Login</a></p>
+  <ul>
+	<li class="firstadminitemq"><a href="signup.html"">Signup</a></li>
+    <li><a href="login.html">Login</a></li>
+    </ul>
 </div>
 
 </div>
 
-<div class="mycontainer">
-  <h3><a class="makegreen" href="index.html">&#8592;Go Back?</a></h3>
-  <a href="login.html"><button  class="buttongreen"   >Login</button></a><br>
-	<h2>View Current Order Summary</h2><br>
+  <div  class="insidetab">
+    <p ><b>NB: This page displays 'NO CURRENT ORDER!' if no order has been made.</b></p>
 
-<p class="makeorange"><b>NB: This page displays 'NO CURRENT ORDER!' if no order has been made.</b></p>
-
-<table style="width:80%">
+<table style="width:100%">
   <caption><b>Current Order Summary</b></caption>
   <tr>
     <th>Name</th>
@@ -55,20 +54,20 @@
     <td>YYYY-MM-DD HH:MI:SS.</td>
     <td>45, Ikeja, Lagos.</td>
     <td>₦1,000</td>
-    <td class="makered">Pending *</td>
+    <td class="makegreen">Ready for delivery *</td>
   </tr>
   
     <tr>
     <td><b>TOTAL</b></td>
-  	<td> </td>
-  	<td></td>
-  	<td></td>
+    <td> </td>
+    <td></td>
+    <td></td>
     <td><b>₦1,000</b></td>
     <td></td>
     </tr>
 
   <tr>
-    <td class="makered" style="text-align: center;">* Dispatch would send a delivery confirmation upon delivery. Order would then be moved to 'All Order History Page'</td>
+    <td class="makered" style="text-align: center;"></td>
     <td></td>
     <td></td>
     <td></td>
@@ -76,24 +75,32 @@
     <td></td>
   </tr>
 </table>
-	
-</div>
+  
 
-<h4 class="lotsofspace">Logout <a href="index.html" class ="makeorange">here</a></h4>
+  </div>
+
+
+
+
+  
+
+
+
 
 
 
 <div class="spacing"></div>
-<hr>
-<div class="centerfooter">
+
+<div class="centerfooter" id="dropfoot">
+  <hr>
   Copyright © 2018, <a href="index.html" class="makeorange">book-a-meal</a> All Rights Reserved
 </div>
 
 <script type="text/javascript">
-	var tooltip = document.getElementById("fifthadminitem");
+	/*var tooltip = document.getElementById("fifthadminitem");
 	tip(tooltip);
 
-  alert('Please login to complete order!');
+  alert('Please login to complete order!');*/
 </script>
 
 

@@ -1,4 +1,4 @@
-input[type=email], input[type=password], input[type=text] {
+input[type=email], input[type=password], input[type=text], input[type=number] {
     margin: 5px 0 22px 0;
     display: inline-block;
     width: 80%;
@@ -8,7 +8,7 @@ input[type=email], input[type=password], input[type=text] {
     background: #f1f1f1;
 }
 
-input[type=email]:focus, input[type=password]:focus {
+input[type=email]:focus, input[type=password]:focus, input[type=number]:focus, input[type=text]:focus {
     background-color: #ddd;
     outline: none;
 }
@@ -46,6 +46,9 @@ input[type=email]:focus, input[type=password]:focus {
 }
 
  .container form  h1 {
+    margin-left: 5.5em;
+}
+.container form  h2 {
     margin-left: 5.5em;
 }
 
@@ -91,6 +94,10 @@ div.regcent > p{
     .container form  h1 {
     margin-left: 1em;
 }
+
+.container form  h2 {
+    margin-left: 2.8em;
+}
 .logincenterdiv > .ousidediv1{
     display: none;
     
@@ -101,7 +108,7 @@ div.regcent > p{
 }
 
 
-input[type=email], input[type=password], input[type=text] {
+input[type=email], input[type=password], input[type=text], input[type=number] {
     background: #f1f1f1;
     border-radius: 5%;
     width: 80%;
@@ -127,6 +134,16 @@ div.regcent > p{
 
 }
 
+
+.cetraliz{
+    background: #f1f1f1;
+    border-radius: 5%;
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+}
 
 
 }

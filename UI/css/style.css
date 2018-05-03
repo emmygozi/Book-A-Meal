@@ -20,6 +20,14 @@
 
 }
 
+#dropfoot{
+	margin-top: 15em;
+}
+
+#flt{
+	text-align: left;
+}
+
 #menuset{
 	width: 30%;
 	float: left;
@@ -110,8 +118,16 @@ a:hover{
 	.mycontainer{
 	margin-top: 5em;
 	margin-left: 10em;
+	margin-right: 10em;
+	text-align: center;
+
 }
 
+.insidetab{
+    margin: 9em 15em 1em 15em;
+    text-align: center;
+      
+}
 .spacing{
 	margin-top: 2em;
 }
@@ -230,6 +246,9 @@ tr:nth-child(even) {
 	font-weight: bolder;
 }
 
+.mycontainer > h2{
+  text-align: left;
+}
 
 
 body{

@@ -1,4 +1,4 @@
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .wrapper > ul >li >a{
     float: none;
     display: block;
@@ -72,8 +72,38 @@ div.grid_1_of_4.images_1_of_4{
 }
 
 
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 90%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 3px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
 
 
+#myform{
+  border: none;
+}
+
+.mycontainer > h2{
+  margin-left: 4em;
+  width: 100%;
+}
+button#adminsave.button{
+  width: 91%;
+}
+
+#tdyord{
+  margin-right: -6.5em;  
+}
 
 
 
