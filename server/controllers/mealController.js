@@ -4,6 +4,9 @@ import dummydb from '../model/meal';
 
 // import validateRouteId from '../routes/validateid';
 
+// assign dummydb obj to array
+const { foodArray } = dummydb;
+
 /**
  * @class Meals
  */
@@ -18,9 +21,19 @@ class Meals {
     /* if ((!req.headers.authorization) || (req.headers.authorization !== tokenAuth)) {
       return res.status(403).json({ error: 'No credentials sent!' });
     } */
-    const { name } = req.body;
-    dummydb.push(req.body);
-    return res.status(201).json(`name:${name} is added as a new meal`);
+
+    const { name, price, imageid } = req.body;
+    // generate new id for new input
+    const id = foodArray[foodArray.length - 1].id + 1;
+    // create array for new input
+    const toBeAdded = {
+      id, name, price, imageid,
+    };
+    const present = dummydb.find(c => c.name.trim().toLocaleLowerCase() === name.trim().toLocaleLowerCase);
+    if (!present) {
+      dummydb.push(toBeAdded);
+      return res.status(201).json(toBeAdded);
+    }
   }
 
   /**
