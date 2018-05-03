@@ -5,7 +5,8 @@ import dummydb from '../model/meal';
 // import validateRouteId from '../routes/validateid';
 
 // assign dummydb obj to array
-const { foodArray } = dummydb;
+
+const foodarray = dummydb;
 
 /**
  * @class Meals
@@ -24,16 +25,22 @@ class Meals {
 
     const { name, price, imageid } = req.body;
     // generate new id for new input
-    const id = foodArray[foodArray.length - 1].id + 1;
+    const id = foodarray[foodarray.length - 1].id + 1;
     // create array for new input
     const toBeAdded = {
       id, name, price, imageid,
     };
-    const present = dummydb.find(c => c.name.trim().toLowerCase() === name.trim().toLowerCase);
+    const present = dummydb.find(c => (c.name.toLowerCase() === name.toLowerCase()));
     if (!present) {
       dummydb.push(toBeAdded);
-      return res.status(201).json(toBeAdded);
+      return res.status(201).json({ Meals: toBeAdded });
     }
+
+    return res.status(409).json({
+      message: `'${name}' is already in the meal options`,
+      status: 'Fail'
+
+    });
   }
 
   /**

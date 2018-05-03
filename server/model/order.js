@@ -15,7 +15,8 @@ const dataOrder = [
     name: 'rice and chicken',
     price: 1500,
     imageid: 'Qw12345', // id to call saved image from file
-    ordertime: new Date(),
+    ordertime: '2018-7-13: 12:45AM',
+    deliveryaddress: '12, Yaba, Lagos',
     deliverystatus: 0 // 0 delivery status represents pending *. It is of datatype tinyInt.
   },
   {
@@ -23,7 +24,7 @@ const dataOrder = [
     name: 'salad',
     price: 1500,
     imageid: 'Qw12345', // id to call saved image from file
-    ordertime: new Date(),
+    ordertime: '2018-7-13: 12:45AM',
     deliveryaddress: '12, Yaba, Lagos',
     deliverystatus: 1 // 1 delivery status represents delivered. It is of datatype tinyInt.
   }

@@ -3,6 +3,7 @@ import meal from '../controllers/mealController';
 import order from '../controllers/orderController';
 import menu from '../controllers/menuController';
 import user from '../controllers/userController';
+import mealValidation from '../middlewares/mealValidation';
 
 const router = express.Router();
 
@@ -11,9 +12,9 @@ router.post('/api/v1/user', user.addusers);
 router.get('/api/v1/user', user.findAll);
 
 // meal routes
-router.post('/api/v1/meals', meal.addMeal);
+router.post('/api/v1/meals', mealValidation.AuthenticateMealInput, meal.addMeal);
 router.get('/api/v1/meals', meal.findAll);
-router.put('/api/v1/meals/:mealid', meal.updateOne);
+router.put('/api/v1/meals/:mealid', mealValidation.AuthenticateMealInput, meal.updateOne);
 router.delete('/api/v1/meals/:mealid', meal.removeOne);
 
 // order routes

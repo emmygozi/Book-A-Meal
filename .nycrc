@@ -9,6 +9,9 @@
   "exclude": [
     "**/*.test.js",
     "**/__tests__/**",
+    "server/middlewares/**",
+    "server/src/'*.js'",
+    "coverage/**",
     "**/node_modules/**",
     "server/config",
     "server/coverage/**",
