@@ -29,7 +29,7 @@ class Meals {
     const toBeAdded = {
       id, name, price, imageid,
     };
-    const present = dummydb.find(c => c.name.trim().toLocaleLowerCase() === name.trim().toLocaleLowerCase);
+    const present = dummydb.find(c => c.name.trim().toLowerCase() === name.trim().toLowerCase);
     if (!present) {
       dummydb.push(toBeAdded);
       return res.status(201).json(toBeAdded);
