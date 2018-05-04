@@ -50,7 +50,7 @@ class User {
      * @param {object} res object
      */
   static login(req, res) {
-    const { email, password } = req.body;
+    const { email } = req.body;
     const foundUser = users.find(user => user.email === email);
     if (foundUser) {
       if (email.toLowerCase() ) {
