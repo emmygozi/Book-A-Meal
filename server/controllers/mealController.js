@@ -87,9 +87,7 @@ class Meals {
      * @param {object} res object
      */
   static removeOne(req, res) {
-    /* if ((!req.headers.authorization) || (req.headers.authorization !== tokenAuth)) {
-      return res.status(403).json({ error: 'No credentials sent!' });
-    } */
+    
     for (let i = 0; i < dummydb.length; i += 1) {
       const food = dummydb.find(c => c.id === parseInt(req.param('id'), 10));
       if (food) {

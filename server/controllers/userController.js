@@ -53,7 +53,7 @@ class User {
     const { email } = req.body;
     const foundUser = users.find(user => user.email === email);
     if (foundUser) {
-      if (email.toLowerCase() ) {
+      if (email.toLowerCase()) {
         return res.status(200).json({
           message: `Hello '${foundUser.name}', your login was successful`
         });
