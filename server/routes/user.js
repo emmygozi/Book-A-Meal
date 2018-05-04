@@ -7,8 +7,8 @@ const router = express.Router();
 
 
 // user routes
-router.post('/signup', userValid.AuthenticateUserInput, user.signUp);
-router.post('/login', userValid.LoginAuth, user.login);
+router.post('/signup', userValid.AuthenticateUserInput, user.addToken, user.decodeToken , user.signUp);
+router.post('/login', userValid.LoginAuth, user.addToken, user.decodeToken ,user.login);
 
 
 export default router;

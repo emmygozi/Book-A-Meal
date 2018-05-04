@@ -1,13 +1,19 @@
-export default (sequelize, DataTypes) => {
-  const User = sequelize.define('User', {
-    email: DataTypes.STRING,
-    password: DataTypes.STRING,
-    role: DataTypes.STRING,
-    name: DataTypes.STRING
-  }, {});
-  User.associate = (models) => {
-    // associations can be defined here
+const users = [
+  {
+    id: 1,
+    email: 'ty@l.com.com',
+    password: 'yu@k.com'
+  },
+  {
+    id: 2,
+    email: 'sdafttts@h.com',
+    password: 'emmanuel'
+  },
+  {
+    id: 3,
+    email: 'qwerty@uo.com',
+    password: 'qwerty1'
+  },
+];
 
-  };
-  return User;
-};
+export default users;

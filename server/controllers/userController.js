@@ -33,12 +33,9 @@ class User {
     } else {
       res.status(409).json('Email not available. Please use another.');
     }
-    const token = jwt.sign({ users }, 'Supersecret', {
-      expiresIn: 86400 // expires in 24 hours
-    });
+    
     return res.status(201).json({
       newUser: addedUser,
-      token,
       message: 'Account successfully created',
       status: 'Success'
     });
@@ -74,7 +71,7 @@ class User {
      * @param {object} res object
      * @param {object} next object
      */
-  static verifyToken(req, res, next) {
+  static decodeToken(req, res, next) {
     const bearerHeader = req.headers.authorization;
     if (typeof bearerHeader !== 'undefined') {
       const bearer = bearerHeader.split(' ');
@@ -82,8 +79,18 @@ class User {
       req.token = bearerToken;
       next();
     } else {
-      res.status(403).json('Access denied!');
+      res.status(403).json(`${req.user.id}Access denied!`);
     }
+  }
+
+  static addToken(req, res, next){
+   const { id } = req.body.id;
+
+    const token = jwt.sign( id , 'Supersecret', {
+      expiresIn: 86400 // expires in 24 hours
+    });
+    res.json(token);
+    next();
   }
 }
 
