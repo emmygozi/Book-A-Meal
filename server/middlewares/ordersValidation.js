@@ -1,13 +1,16 @@
 import validator from 'validator';
-import meal from '../model/meal';
+import order from '../model/order';
 
+
+
+const regex = /^([\s\.]?[a-zA-Z]+)+$/; 
 
 /*
  * Class representing validator
  *
  * @class MealValidation
  */
-class MealValidation {
+class OrdersValidation {
   /**
    * Check for all required input fields
    * @param {object} req - The request object
@@ -16,25 +19,24 @@ class MealValidation {
    * @returns {object} JSON object representing failure message
    * 
    */
-  static AuthenticateMealInput(req, res, next){
+  static AuthenticateOrderInput(req, res, next){
     const {
-      name, price
+      name, price, deliveryaddress
     } = req.body;
-    
     if (name === undefined) {
       return res.status(400)
         .json({
           status: 'Fail',
           message: 'No input was received for meal'
         });
-    }
-    if (!(validator.isAlpha(name))) {
-      return res.status(406)
-        .json({
-          status: 'Fail',
-          message: 'Your name input is not valid'
-        });
     } 
+    if (deliveryaddress === undefined) {
+        return res.status(400)
+          .json({
+            status: 'Fail',
+            message: 'No input was received for delivery address'
+          });
+      } 
     if (price === undefined) {   
       return res.status(400)
         .json({
@@ -53,7 +55,15 @@ class MealValidation {
       return res.status(400)
         .json({
           status: 'Fail',
-          message: 'name name cannot be empty'
+          message: 'name cannot be empty'
+        });
+    }
+    
+    if (validator.isEmpty(deliveryaddress)) {
+      return res.status(400)
+        .json({
+          status: 'Fail',
+          message: 'Delivery address cannot be empty'
         });
     }
   
@@ -68,6 +78,22 @@ class MealValidation {
         });
     }
 
+    if (!(validator.isLength(deliveryaddress, { min: 5, max: 100 }))) {
+        return res.status(406)
+          .json({
+            status: 'Fail',
+            message: 'Your address input is not valid'
+          });
+      }
+
+      if (!(validator.isAlpha(name))) {
+        return res.status(406)
+          .json({
+            status: 'Fail',
+            message: 'Your name input is not valid'
+          });
+      }
+  
     
 
     if (validator.contains(name, '  ')) {
@@ -78,6 +104,14 @@ class MealValidation {
         });
     }
 
+    if (validator.contains(deliveryaddress, '  ')) {
+        return res.status(406)
+          .json({
+            status: 'Fail',
+            message: 'Invalid delivery address. Please use single whitespace'
+          });
+      }
+
     if (name !== validator.trim(name, ' ')) {
       return res.status(406)
         .json({
@@ -85,10 +119,17 @@ class MealValidation {
           message: 'name cannot end/begin with whitespace'
         });
     }
+    if (deliveryaddress !== validator.trim(deliveryaddress, ' ')) {
+        return res.status(406)
+          .json({
+            status: 'Fail',
+            message: 'name cannot end/begin with whitespace'
+          });
+      }
     return next();
   }
 }
 
 
-export default MealValidation;
+export default OrdersValidation;
 

@@ -2,10 +2,6 @@ import dummydb from '../model/meal';
 // import tokenAuth from '../Auth/authenticateuser';
 
 
-// import validateRouteId from '../routes/validateid';
-
-// assign dummydb obj to array
-
 const foodarray = dummydb;
 
 /**
@@ -32,8 +28,10 @@ class Meals {
     };
     const present = dummydb.find(c => (c.name.toLowerCase() === name.toLowerCase()));
     if (!present) {
-      dummydb.push(toBeAdded);
-      return res.status(201).json({ Meals: toBeAdded });
+      if ((name || price || imageid) !== undefined) {
+        dummydb.push(toBeAdded);
+        return res.status(201).json({ Meals: toBeAdded });
+      }
     }
 
     return res.status(409).json({

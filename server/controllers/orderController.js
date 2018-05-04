@@ -1,6 +1,6 @@
 import dummydb from '../model/order';
-// import tokenAuth from '../Auth/userToken';
-// import validateRouteId from '../routes/validateid';
+
+const orderarray = dummydb;
 
 /**
  * @class Orders
@@ -13,12 +13,17 @@ class Orders {
      * @param {object} res object
      */
   static addOrders(req, res) {
-    /* if ((!req.headers.authorization) || (req.headers.authorization !== tokenAuth)) {
-      return res.status(403).json({ error: 'No credentials sent!' });
-    } */
-    const { name } = req.body;
-    dummydb.push(req.body);
-    return res.status(201).json(`${name} is added as a new meal`);
+    const {
+      name, price, userid, ordertime, deliveryaddress, deliverystatus
+    } = req.body;
+    // generate new id for new input
+    const id = orderarray[orderarray.length - 1].id + 1;
+    // create array for new input
+    const toBeAdded = {
+      id, name, price, userid, ordertime, deliveryaddress, deliverystatus
+    };
+
+    return res.status(201).json({ Orders: toBeAdded, message: 'new order placed' });
   }
 
   /**
@@ -51,6 +56,7 @@ class Orders {
         dummydb[i].imageid = req.body.imageid;
         dummydb[i].price = req.body.price;
         dummydb[i].ordertime = req.body.ordertime;
+        dummydb[i].deliveryaddress = req.body.ordertime;
         dummydb[i].deliverystatus = req.body.deliverystatus;
         return res.status(201).json({
           dummydb,

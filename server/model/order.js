@@ -13,6 +13,7 @@ const dataOrder = [
   {
     id: 1,
     name: 'rice and chicken',
+    userid: 3,
     price: 1500,
     imageid: 'Qw12345', // id to call saved image from file
     ordertime: '2018-7-13: 12:45AM',
@@ -22,6 +23,7 @@ const dataOrder = [
   {
     id: 2,
     name: 'salad',
+    userid: 6,
     price: 1500,
     imageid: 'Qw12345', // id to call saved image from file
     ordertime: '2018-7-13: 12:45AM',

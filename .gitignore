@@ -2,3 +2,4 @@
 node_modules
 .coveralls
 server/dist
+.nyc_output

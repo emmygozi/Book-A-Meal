@@ -4,12 +4,11 @@ import order from '../controllers/orderController';
 import menu from '../controllers/menuController';
 import user from '../controllers/userController';
 import mealValidation from '../middlewares/mealValidation';
+import userValidation from '../middlewares/ordersValidation';
+import userValid from '../middlewares/userValidation';
 
 const router = express.Router();
 
-// users route
-router.post('/api/v1/user', user.addusers);
-router.get('/api/v1/user', user.findAll);
 
 // meal routes
 router.post('/api/v1/meals', mealValidation.AuthenticateMealInput, meal.addMeal);
@@ -18,14 +17,18 @@ router.put('/api/v1/meals/:mealid', mealValidation.AuthenticateMealInput, meal.u
 router.delete('/api/v1/meals/:mealid', meal.removeOne);
 
 // order routes
-router.post('/api/v1/orders', order.addOrders);
+router.post('/api/v1/orders', userValidation.AuthenticateOrderInput, order.addOrders);
 router.get('/api/v1/orders', order.findAll);
-router.put('/api/v1/orders/:orderid', order.updateOne);
+router.put('/api/v1/orders/:orderid', userValidation.AuthenticateOrderInput, order.updateOne);
 router.delete('/api/v1/orders/:orderid', order.removeOne);
 
 // menu routes
 router.post('/api/v1/menu', menu.addMeal);
 router.get('/api/v1/menu', menu.findAll);
+
+// user routes
+router.post('/api/v1/signup', userValid.AuthenticateUserInput, user.signUp);
+router.post('/api/v1/login', userValid.LoginAuth, user.login);
 
 
 export default router;
